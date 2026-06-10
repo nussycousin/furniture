@@ -20,7 +20,7 @@ export const furniture: FurnitureItem[] = [
   },
   {
     id: 'refrigerator',
-    name: 'מיקרר Normande דגם ND-510BG',
+    name: 'מקרר Normande דגם ND-510BG',
     images: ['/furniture/refrigerator.jpeg'],
     dimensions: 'רוחב 68 × עומק 75 ס״מ, גובה 1.80 מ׳',
     description: 'מקרר בעיצוב מודרני עם חזית זכוכית שחורה כמו חדש. נפח כולל של 510 ליטר (394 קירור, 116 מקפיא).',
