@@ -15,10 +15,16 @@ REMAINING (user): verify the WhatsApp link opens correctly on a real phone (numb
 - Host: Vercel. Project: fhsystemsdev-4511s-projects/furniture (auto-detected Vite,
   build `vite build`, output `dist`; no vercel.json needed).
 - Live (production alias): https://furniture-six-tau.vercel.app
-- Re-deploy: `vercel --prod --yes --scope fhsystemsdev-4511s-projects` from project root
-  (must be logged in: `vercel login`, or pass VERCEL_TOKEN).
-- NOTE: deploy was done via a temporary access token the user pasted — user should revoke
-  it at https://vercel.com/account/tokens now that it's live.
+- GitHub repo: https://github.com/nussycousin/furniture (default branch: main).
+- Auto-deploy: enabled via Vercel↔GitHub Git integration — once the existing Vercel
+  project is connected to the repo (Project → Settings → Git → Connect), every push to
+  `main` auto-builds and deploys to the SAME project/URL above. (One-time dashboard
+  connect done by user.)
+- PUBLISH A CHANGE: edit files → `git add -A` → `git commit -m "..."` → `git push`.
+  Vercel builds & deploys main automatically. (Manual fallback: `vercel --prod --yes
+  --scope fhsystemsdev-4511s-projects`.)
+- NOTE: initial CLI deploy used a temporary access token the user pasted — user should
+  revoke it at https://vercel.com/account/tokens now that it's live.
 
 ## Build checklist
 - [x] Phase 1 — theme.ts + RTL setup + fonts (blank themed app renders)
