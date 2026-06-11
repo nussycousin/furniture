@@ -3,6 +3,7 @@ import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import Gallery from './components/Gallery.tsx'
+import IntroMessage from './components/IntroMessage.tsx'
 import FurnitureDialog from './components/FurnitureDialog.tsx'
 import { furniture } from './data/furniture.ts'
 import type { FurnitureItem } from './data/furniture.ts'
@@ -27,6 +28,9 @@ function App() {
           <Box
             sx={{ mt: 2.5, width: 48, height: 3, borderRadius: 2, bgcolor: 'primary.main' }}
           />
+        </Box>
+        <Box sx={{ mb: { xs: 5, sm: 7 } }}>
+          <IntroMessage />
         </Box>
         <Gallery items={furniture} onSelect={setSelected} />
       </Container>
