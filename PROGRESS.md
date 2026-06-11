@@ -33,8 +33,11 @@ REMAINING (user): verify the WhatsApp link opens correctly on a real phone (numb
 - [x] Phase 4 — FurnitureDialog + WhatsAppButton
 - [x] Phase 5 — polish + mobile check (DONE); real-phone WhatsApp check = user TODO
 - [x] Deploy — Vercel production live
-- [x] IntroMessage — seller's personal note between header & gallery (RTL, max-width 600,
-      centered; 3-bullet list w/ emphasized lead-in labels; italic sign-off "באהבה, נוסי.")
+- [x] IntroMessage — seller's personal note between header & gallery. Redesigned compact +
+      collapsible: greeting + "קרא עוד"/"קרא פחות" toggle (collapsed by default via MUI
+      Collapse, so gallery stays high). Expanded = 3 tight icon rows (🏷️ גמישות במחיר /
+      🤝 עזרה למי שצריך / 📍 איסוף) with bold lead-in labels + italic sign-off "באהבה, נותי.".
+      RTL, right-aligned, max-width 560, smaller body font (~14.5px). Wording unchanged.
 
 ## Decisions log
 - Scaffold arrived as **vanilla-ts**, not react-ts (create-vite@9 quirk). Converted in

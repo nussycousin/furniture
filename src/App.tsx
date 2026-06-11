@@ -29,7 +29,7 @@ function App() {
             sx={{ mt: 2.5, width: 48, height: 3, borderRadius: 2, bgcolor: 'primary.main' }}
           />
         </Box>
-        <Box sx={{ mb: { xs: 5, sm: 7 } }}>
+        <Box sx={{ mb: { xs: 3.5, sm: 5 } }}>
           <IntroMessage />
         </Box>
         <Gallery items={furniture} onSelect={setSelected} />
