@@ -33,7 +33,7 @@ export const furniture: FurnitureItem[] = [
       '/furniture/Decorative pillow.jpeg'
     ],
     dimensions: 'ספה פינתית בשני חלקים — 220 × 95 ס״מ ו-180 × 95 ס״מ, גובה 80 ס״מ',
-    description: 'ספה פינתית מעור (צבע בהיר) בשני חלקים, מציעה ישיבה מרווחת ונוחה.',
+    description: 'ספה פינתית מעור (צבע בהיר) בשני חלקים, מציעה ישיבה מרווחת ונוחה , בקניית הספה אני מצרף חמש כריות נוי.',
     price: '800 ש״ח',
   },
   {
@@ -179,14 +179,14 @@ export const furniture: FurnitureItem[] = [
   {
     id: 'vacuum-cleaner',
     name: 'שואב אבק ציקלון',
-    images: ['/furniture/Vacuum-cleaner.jpeg'],
+    images: ['/furniture/Vacuum Cleaner.jpeg'],
     description: 'שואב אבק עוצמתי ללא שקית (טכנולוגיית ציקלון), כולל כל האביזרים הנלווים.',
     price: '120 ש״ח',
   },
   {
     id: 'geese-quilt',
     name: 'שמיכת נוצות אווז זוגית',
-    images: ['/furniture/Geese-quilt.jpeg'],
+    images: ['/furniture/Geese Quilt.jpeg'],
     dimensions: '2.0 × 2.20 מטר',
     description: ' שמיכת פוך נוצות אווז זוגית ומפנקת. השמיכה הכי נעימה שתמצאו בשוק של Carmia Quilt.',
     price: '450 ש״ח',
@@ -196,7 +196,7 @@ export const furniture: FurnitureItem[] = [
     name: 'סט שני מזרני עמינח רקיע (תבור)',
     // הוספת תמונת התווית כתמונה שנייה
     images: [
-      '/furniture/Mattress Tavor.jpeg',
+      '/furniture/Mattresses Tavor.jpeg',
       '/furniture/Mattress Label.jpeg',
     ],
     dimensions: ' רוחב 0.90 × אורך 1.90 × גובה 0.25 מטר (עבור כל מזרן) סה"כ 1.90 * 1.80 ',
@@ -206,14 +206,14 @@ export const furniture: FurnitureItem[] = [
   {
     id: 'laundry-basket',
     name: 'סל כביסה גמיש אפור',
-    images: ['/furniture/Laundry-basket.jpeg'],
+    images: ['/furniture/Laundry Basket.jpeg'],
     description: 'סל כביסה מפלסטיק גמיש בצבע אפור עם ידיות נשיאה נוחות.',
     price: '20 ש״ח',
   },
   {
     id: 'modern-rug',
     name: 'שטיח מודרני גיאומטרי',
-    images: ['/furniture/Modern-rug.jpeg'],
+    images: ['/furniture/Modern Rug.jpeg'],
     dimensions: '2.3 × 1.8 מטר',
     description: 'שטיח בעיצוב גיאומטרי מודרני, נעים ממש למגע.',
     price: '200 ש״ח',
