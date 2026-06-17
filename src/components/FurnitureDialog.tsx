@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Dialog from '@mui/material/Dialog'
 import Grow from '@mui/material/Grow'
 import Box from '@mui/material/Box'
@@ -28,9 +28,46 @@ function CloseIcon() {
 function FurnitureDialog({ item, onClose }: Props) {
   // Keep the last item mounted so content stays visible during the close animation.
   const [shown, setShown] = useState<FurnitureItem | null>(item)
+  // Index of the image currently centered in the swipe strip (for the dots/counter).
+  const [active, setActive] = useState(0)
+  const stripRef = useRef<HTMLDivElement>(null)
+
   useEffect(() => {
-    if (item) setShown(item)
+    if (item) {
+      setShown(item)
+      setActive(0)
+      // Reset the strip to the first image when a new item opens.
+      stripRef.current?.scrollTo({ left: 0 })
+    }
   }, [item])
+
+  const hasMultiple = (shown?.images.length ?? 0) > 1
+
+  // Pick whichever image is closest to the strip's center — RTL-safe (no
+  // reliance on scrollLeft sign, which differs between browsers in RTL).
+  const handleScroll = () => {
+    const strip = stripRef.current
+    if (!strip) return
+    const center = strip.getBoundingClientRect().left + strip.clientWidth / 2
+    let nearest = 0
+    let nearestDist = Infinity
+    Array.from(strip.children).forEach((child, i) => {
+      const rect = (child as HTMLElement).getBoundingClientRect()
+      const dist = Math.abs(rect.left + rect.width / 2 - center)
+      if (dist < nearestDist) {
+        nearestDist = dist
+        nearest = i
+      }
+    })
+    setActive(nearest)
+  }
+
+  const scrollToImage = (i: number) => {
+    const strip = stripRef.current
+    if (!strip) return
+    const target = strip.children[i] as HTMLElement | undefined
+    target?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+  }
 
   return (
     <Dialog
@@ -65,32 +102,95 @@ function FurnitureDialog({ item, onClose }: Props) {
           </IconButton>
 
           {/* Image(s): horizontal swipe strip when more than one. */}
-          <Box
-            sx={{
-              display: 'flex',
-              overflowX: 'auto',
-              scrollSnapType: 'x mandatory',
-              bgcolor: '#F0ECE6',
-              '&::-webkit-scrollbar': { display: 'none' },
-              scrollbarWidth: 'none',
-            }}
-          >
-            {shown.images.map((src, i) => (
-              <Box
-                key={i}
-                component="img"
-                src={src}
-                alt={shown.images.length > 1 ? `${shown.name} ${i + 1}` : shown.name}
-                sx={{
-                  flex: '0 0 100%',
-                  width: '100%',
-                  height: { xs: 300, sm: 380 },
-                  objectFit: 'contain',
-                  scrollSnapAlign: 'center',
-                  display: 'block',
-                }}
-              />
-            ))}
+          <Box sx={{ position: 'relative', bgcolor: '#F0ECE6' }}>
+            <Box
+              ref={stripRef}
+              onScroll={handleScroll}
+              sx={{
+                display: 'flex',
+                overflowX: 'auto',
+                scrollSnapType: 'x mandatory',
+                '&::-webkit-scrollbar': { display: 'none' },
+                scrollbarWidth: 'none',
+              }}
+            >
+              {shown.images.map((src, i) => (
+                <Box
+                  key={i}
+                  component="img"
+                  src={src}
+                  alt={hasMultiple ? `${shown.name} ${i + 1}` : shown.name}
+                  sx={{
+                    flex: '0 0 100%',
+                    width: '100%',
+                    height: { xs: 300, sm: 380 },
+                    objectFit: 'contain',
+                    scrollSnapAlign: 'center',
+                    display: 'block',
+                  }}
+                />
+              ))}
+            </Box>
+
+            {hasMultiple && (
+              <>
+                {/* Counter, e.g. "2 / 3" */}
+                <Box
+                  sx={{
+                    position: 'absolute',
+                    top: 12,
+                    insetInlineEnd: 12,
+                    px: 1.25,
+                    py: 0.25,
+                    borderRadius: 999,
+                    bgcolor: 'rgba(43, 43, 43, 0.55)',
+                    color: '#fff',
+                    fontSize: 13,
+                    fontWeight: 600,
+                    backdropFilter: 'blur(4px)',
+                    pointerEvents: 'none',
+                  }}
+                >
+                  {active + 1} / {shown.images.length}
+                </Box>
+
+                {/* Pagination dots — tap to jump to an image */}
+                <Box
+                  sx={{
+                    position: 'absolute',
+                    insetInlineStart: 0,
+                    insetInlineEnd: 0,
+                    bottom: 10,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    gap: 1,
+                  }}
+                >
+                  {shown.images.map((_, i) => (
+                    <Box
+                      key={i}
+                      component="button"
+                      type="button"
+                      onClick={() => scrollToImage(i)}
+                      aria-label={`תמונה ${i + 1}`}
+                      aria-current={i === active}
+                      sx={{
+                        p: 0,
+                        border: 'none',
+                        cursor: 'pointer',
+                        width: i === active ? 22 : 8,
+                        height: 8,
+                        borderRadius: 999,
+                        bgcolor:
+                          i === active ? 'primary.main' : 'rgba(255, 255, 255, 0.85)',
+                        boxShadow: '0 1px 3px rgba(43, 43, 43, 0.3)',
+                        transition: 'width 200ms ease, background-color 200ms ease',
+                      }}
+                    />
+                  ))}
+                </Box>
+              </>
+            )}
           </Box>
 
           <Box sx={{ p: { xs: 2.5, sm: 3.5 } }}>
