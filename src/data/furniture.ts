@@ -52,13 +52,7 @@ export const furniture: FurnitureItem[] = [
     description: 'מייבש כביסה פתח חזית של אלקטרולוקס. עושה את העבודה בצורה מצוינת.',
     price: '700 ש״ח (או 1200 ש״ח לסט יחד עם מכונת הכביסה)',
   },
-  {
-    id: 'espresso-machine',
-    name: 'מכונת קפה ומקציף Nespresso',
-    images: ['/furniture/Espresso-machine.jpeg'],
-    description: 'מכונת אספרסו Pixie של Nespresso כולל מקציף חלב מקורי (Aeroccino).',
-    price: '250 ש״ח',
-  },
+  
   {
     id: 'microwave',
     name: 'מיקרוגל Midea',
@@ -93,13 +87,6 @@ export const furniture: FurnitureItem[] = [
     images: ['/furniture/mirror.jpeg'],
     dimensions: 'רוחב 45 × גובה 115 ס״מ',
     description: 'מראת גוף מלבנית עם מסגרת נקייה (קיימות מסגרות בצבע שחור או לבן).',
-    price: '50 ש״ח',
-  },
-  {
-    id: 'fan',
-    name: 'מאוורר רצפה Gold Line',
-    images: ['/furniture/fan.jpeg'],
-    description: 'מאוורר קופסה מרובע עם רשת מסתובבת וטיימר.',
     price: '50 ש״ח',
   },
   {
@@ -140,14 +127,6 @@ export const furniture: FurnitureItem[] = [
     price: '30 ש״ח',
   },
   {
-    id: 'led-zeppelin',
-    name: 'פוסטר ממוסגר - Led Zeppelin',
-    images: ['/furniture/Led Zeppelin.jpeg'],
-    dimensions: 'גובה 90 ס"מ x רוחב 60 ס"מ',
-    description: 'תמונת עטיפת אלבום ממוסגרת של Led Zeppelin - Mothership.',
-    price: '100 ש״ח',
-  },
-  {
     id: 'shabbat-hotplate',
     name: 'פלטת שבת Gold Line (חדשה)',
     images: ['/furniture/Shabbat Hotplate.jpeg'],
@@ -159,13 +138,6 @@ export const furniture: FurnitureItem[] = [
     name: 'בלנדר Morphy Richards',
     images: ['/furniture/Blender.jpeg'],
     description: 'בלנדר  עם קנקן זכוכית של Morphy Richards, במצב מעולה.',
-    price: '100 ש״ח',
-  },
-  {
-    id: 'panasonic-tv',
-    name: 'טלוויזיה 40 אינץ Panasonic',
-    images: ['/furniture/Panasonic TV.jpeg'],
-    description: ' טלווזיה לא חכמה אבל נחמד כמסך להקרין בו מה שרוצים ',
     price: '100 ש״ח',
   },
   {
@@ -233,5 +205,19 @@ export const furniture: FurnitureItem[] = [
     dimensions: '190 × 80 × 20 ס״מ',
     description: 'מזרן יחיד , star נוח ממש.',
     price: '350 ש״ח',
+  },
+  {
+    id: 'trash-can-large',
+    name: 'פח אשפה גדול',
+    images: ['/furniture/trash can L.jpeg'],
+    description: 'פח אשפה גדול ונוח למטבח.',
+    price: '25 ש״ח',
+  },
+  {
+    id: 'vegetable-dispenser',
+    name: 'מתקן לאחסון ירקות',
+    images: ['/furniture/vegetable dispenser.jpeg'],
+    description: 'מתקן מדורג לאחסון ושמירה על ירקות ופירות.',
+    price: '25 ש״ח',
   },
 ]
