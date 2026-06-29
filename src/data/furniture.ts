@@ -11,22 +11,6 @@ export type FurnitureItem = {
 // descriptions are placeholders; confirm/replace with real copy.
 export const furniture: FurnitureItem[] = [
   {
-    id: 'table',
-    name: 'שולחן סלון עץ מלא',
-    images: ['/furniture/dining-room-table.jpeg'],
-    dimensions: '100 × 100 ס״מ (1 × 1 מ׳)',
-    description: 'שולחן סלון מרובע מעץ מלא בשילוב פרזול מתכת, כבד ומרשים.',
-    price: '400 ש״ח',
-  },
-  {
-    id: 'refrigerator',
-    name: 'מקרר Normande דגם ND-510BG',
-    images: ['/furniture/refrigerator.jpeg'],
-    dimensions: 'רוחב 68 × עומק 75 ס״מ, גובה 1.80 מ׳',
-    description: 'מקרר בעיצוב מודרני עם חזית זכוכית שחורה כמו חדש. נפח כולל של 510 ליטר (394 קירור, 116 מקפיא).',
-    price: '2000 ש״ח',
-  },
-  {
     id: 'sofa',
     name: 'ספה פינתית',
     images: ['/furniture/sofa.jpeg',
@@ -82,14 +66,6 @@ export const furniture: FurnitureItem[] = [
     price: '250 ש״ח',
   },
   {
-    id: 'mirror',
-    name: 'מראת גוף',
-    images: ['/furniture/mirror.jpeg'],
-    dimensions: 'רוחב 45 × גובה 115 ס״מ',
-    description: 'מראת גוף מלבנית עם מסגרת נקייה (קיימות מסגרות בצבע שחור או לבן).',
-    price: '50 ש״ח',
-  },
-  {
     id: 'cutlery-set',
     name: 'סט סכו״ם 24 חלקים (חדש בקופסה)',
     images: ['/furniture/Cutlery.jpeg'],
@@ -112,41 +88,11 @@ export const furniture: FurnitureItem[] = [
     price: '600 ש״ח',
   },
   {
-    id: 'dimplex-heater',
-    name: 'קמין חשמלי Dimplex',
-    images: ['/furniture/heat-spreader.jpeg'],
-    dimensions: 'רוחב 40 × עומק 26 × גובה 55 ס״מ',
-    description: 'תנור חימום חשמלי איכותי מבית Dimplex בעיצוב קמין עם אפקט גחלים.',
-    price: '200 ש״ח',
-  },
-  {
-    id: 'designed-trash-can',
-    name: 'פח אשפה מעוצב',
-    images: ['/furniture/Designed-trash-can.jpeg'],
-    description: 'פח פלסטיק דמוי ראטן, נוח לשירותים או למשרד.',
-    price: '30 ש״ח',
-  },
-  {
     id: 'shabbat-hotplate',
     name: 'פלטת שבת Gold Line (חדשה)',
     images: ['/furniture/Shabbat Hotplate.jpeg'],
     description: 'פלטת שבת גדולה ואיכותית של Gold Line, שומש פעם אחת .',
     price: '60 ש״ח',
-  },
-  {
-    id: 'blender-morphy',
-    name: 'בלנדר Morphy Richards',
-    images: ['/furniture/Blender.jpeg'],
-    description: 'בלנדר  עם קנקן זכוכית של Morphy Richards, במצב מעולה.',
-    price: '100 ש״ח',
-  },
-  {
-    id: 'area-rug-gray',
-    name: 'שטיח סלון גדול אפור',
-    images: ['/furniture/Area Rug.jpeg'],
-    dimensions: '2.0 × 2.9 מטר',
-    description: 'שטיח סלון גדול ומעוצב בגווני אפור, מוסיף המון חמימות לבית.',
-    price: '350 ש״ח',
   },
   {
     id: 'vacuum-cleaner',
@@ -183,14 +129,6 @@ export const furniture: FurnitureItem[] = [
     price: '20 ש״ח',
   },
   {
-    id: 'modern-rug',
-    name: 'שטיח מודרני גיאומטרי',
-    images: ['/furniture/Modern Rug.jpeg'],
-    dimensions: '2.3 × 1.8 מטר',
-    description: 'שטיח בעיצוב גיאומטרי מודרני, נעים ממש למגע.',
-    price: '200 ש״ח',
-  },
-  {
     id: 'visco-mattress-large',
     name: 'מזרן ויסקו זוגי',
     images: ['/furniture/Mattresses Aeroflex.jpeg'],
@@ -214,10 +152,47 @@ export const furniture: FurnitureItem[] = [
     price: '25 ש״ח',
   },
   {
-    id: 'vegetable-dispenser',
-    name: 'מתקן לאחסון ירקות',
-    images: ['/furniture/vegetable dispenser.jpeg'],
-    description: 'מתקן מדורג לאחסון ושמירה על ירקות ופירות.',
-    price: '25 ש״ח',
+    id: 'kettle-goldline',
+    name: 'קומקום חשמלי Gold Line',
+    images: ['/furniture/WhatsApp Image 2026-06-29 at 18.57.42.jpeg'],
+    description: 'קומקום חשמלי לבן של Gold Line בנפח 1.7 ליטר, עובד מצוין.',
+    price: 'מחיר — למילוי',
   },
+  {
+    id: 'cookware-set',
+    name: 'סט כלי בישול והגשה',
+    images: [
+      '/furniture/WhatsApp Image 2026-06-29 at 18.57.41.jpeg',
+      '/furniture/WhatsApp Image 2026-06-29 at 18.57.41 (1).jpeg',
+      '/furniture/WhatsApp Image 2026-06-29 at 19.06.28.jpeg',
+    ],
+    description: 'מגוון כלי בישול והגשה — סירים, מחבתות, פומפיה, מסננת, כלי הגשה, צלחות, כוסות יין וסכו״ם. נמכרים יחד או בנפרד.',
+    price: 'מחיר — למילוי',
+  },
+  {
+    id: 'wall-pictures',
+    name: 'מבחר תמונות ושלטי קיר',
+    images: [
+      '/furniture/WhatsApp Image 2026-06-29 at 18.57.42 (1).jpeg',
+      '/furniture/WhatsApp Image 2026-06-29 at 18.57.42 (2).jpeg',
+      '/furniture/WhatsApp Image 2026-06-29 at 18.57.42 (5).jpeg',
+      '/furniture/WhatsApp Image 2026-06-29 at 18.57.43.jpeg',
+    ],
+    description: 'מבחר תמונות ושלטי קיר מעוצבים — תמונת ינשופים לחדר ילדים, תמונת פטרייה ממוסגרת, פוסטר "טובי ישראלי" ושלט "RELAX". נמכרות יחד או בנפרד.',
+    price: 'מחיר — למילוי',
+  },
+  {
+    id: 'water-cooler-strauss',
+    name: 'בר מים Strauss Water',
+    images: ['/furniture/WhatsApp Image 2026-06-29 at 18.57.42 (3).jpeg'],
+    description: 'בר מים (קולר) של Strauss Water בצבע אדום — מים חמים וקרים בלחיצת כפתור.',
+    price: 'מחיר — למילוי',
+  },
+  {
+    id: 'writing-desk',
+    name: 'שולחן כתיבה לבן',
+    images: ['/furniture/WhatsApp Image 2026-06-29 at 18.57.42 (4).jpeg'],
+    description: 'שולחן כתיבה לבן עם ארבע מגירות, יציב ומרווח לעבודה או ללימודים.',
+    price: 'מחיר — למילוי',
+  }
 ]
