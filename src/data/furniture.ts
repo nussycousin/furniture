@@ -156,7 +156,7 @@ export const furniture: FurnitureItem[] = [
     name: 'קומקום חשמלי Gold Line',
     images: ['/furniture/WhatsApp Image 2026-06-29 at 18.57.42.jpeg'],
     description: 'קומקום חשמלי לבן של Gold Line בנפח 1.7 ליטר, עובד מצוין.',
-    price: 'מחיר — למילוי',
+    price: 'למסירה',
   },
   {
     id: 'cookware-set',
@@ -167,7 +167,7 @@ export const furniture: FurnitureItem[] = [
       '/furniture/WhatsApp Image 2026-06-29 at 19.06.28.jpeg',
     ],
     description: 'מגוון כלי בישול והגשה — סירים, מחבתות, פומפיה, מסננת, כלי הגשה, צלחות, כוסות יין וסכו״ם. נמכרים יחד או בנפרד.',
-    price: 'מחיר — למילוי',
+    price: ' למסירה',
   },
   {
     id: 'wall-pictures',
@@ -179,20 +179,20 @@ export const furniture: FurnitureItem[] = [
       '/furniture/WhatsApp Image 2026-06-29 at 18.57.43.jpeg',
     ],
     description: 'מבחר תמונות ושלטי קיר מעוצבים — תמונת ינשופים לחדר ילדים, תמונת פטרייה ממוסגרת, פוסטר "טובי ישראלי" ושלט "RELAX". נמכרות יחד או בנפרד.',
-    price: 'מחיר — למילוי',
+    price: 'למסירה',
   },
   {
     id: 'water-cooler-strauss',
     name: 'בר מים Strauss Water',
     images: ['/furniture/WhatsApp Image 2026-06-29 at 18.57.42 (3).jpeg'],
     description: 'בר מים (קולר) של Strauss Water בצבע אדום — מים חמים וקרים בלחיצת כפתור.',
-    price: 'מחיר — למילוי',
+    price: 'למסירה',
   },
   {
     id: 'writing-desk',
     name: 'שולחן כתיבה לבן',
     images: ['/furniture/WhatsApp Image 2026-06-29 at 18.57.42 (4).jpeg'],
     description: 'שולחן כתיבה לבן עם ארבע מגירות, יציב ומרווח לעבודה או ללימודים.',
-    price: 'מחיר — למילוי',
+    price: ' 150 ש״ח',
   }
 ]
